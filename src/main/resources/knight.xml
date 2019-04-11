@@ -22,4 +22,9 @@
             <aop:after method="singAfterQuest" pointcut-ref="embark"/>
         </aop:aspect>
     </aop:config>
+
+    <!--Chapter 2-->
+
+    <bean id="duke" class="com.sustav.chap2.Juggle"/>
+
 </beans>
