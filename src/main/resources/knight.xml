@@ -7,7 +7,7 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
-    <bean id="knight" class="com.sustav.springinaction.BraveKnight">
+    <bean id="knight" class="com.sustav.springinaction.BraveKnight" init-method="init" destroy-method="destroed">
         <constructor-arg ref="quest"/>
         <!--<constructor-arg ref="minstrel"/>-->
     </bean>

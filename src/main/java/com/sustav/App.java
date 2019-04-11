@@ -17,6 +17,7 @@ public class App {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("knight.xml");
         Knight knight = context.getBean("knight", Knight.class);
         knight.embarkOnQuest();
+        context.destroy();
 
     }
 }
