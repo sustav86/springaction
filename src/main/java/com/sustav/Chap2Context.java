@@ -1,6 +1,7 @@
 package com.sustav;
 
 import com.sustav.chap2.Juggle;
+import com.sustav.chap2.OneManBand;
 import com.sustav.chap2.Stage;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,9 +15,15 @@ public class Chap2Context {
 //
 //        Juggle poet = context.getBean("poet", Juggle.class);
 //        poet.perform();
+//
+//        Stage theStage = context.getBean("theStage", Stage.class);
+//        System.out.println(theStage);
+//
+//        OneManBand hank = context.getBean("hank", OneManBand.class);
+//        hank.perform();
 
-        Stage theStage = context.getBean("theStage", Stage.class);
-        System.out.println(theStage);
+        Juggle poetSpeL = context.getBean("poetSpeL", Juggle.class);
+        poetSpeL.perform();
 
     }
 }

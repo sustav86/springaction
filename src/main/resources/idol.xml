@@ -11,6 +11,7 @@
 
     <bean id="duke" class="com.sustav.chap2.Juggle">
         <constructor-arg value="35"/>
+        <property name="heap" value="HEAP"/>
     </bean>
 
     <bean id="sonnet" class="com.sustav.chap2.Sonnet29"/>
@@ -20,6 +21,28 @@
         <constructor-arg ref="sonnet"/>
     </bean>
 
+    <bean id="poetSpeL" class="com.sustav.chap2.PoeticJuggle">
+        <constructor-arg value="35"/>
+        <constructor-arg value="#{poet.poem}"/>
+        <property name="randomKey" value="#{T(Math).random()}"/>
+    </bean>
+
     <bean id="theStage" class="com.sustav.chap2.Stage" init-method="getInstance"/>
+
+    <bean id="saxophone" class="com.sustav.chap2.Saxophone"/>
+
+    <bean id="hank" class="com.sustav.chap2.OneManBand">
+        <property name="instruments">
+            <list>
+                <ref bean="saxophone"/>
+            </list>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="DDD">STRUM</prop>
+                <prop key="TTT">TTT</prop>
+            </props>
+        </property>
+    </bean>
 
 </beans>

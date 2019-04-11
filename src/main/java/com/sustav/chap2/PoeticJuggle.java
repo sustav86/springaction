@@ -3,6 +3,7 @@ package com.sustav.chap2;
 public class PoeticJuggle extends Juggle {
 
     private Poem poem;
+    private double randomKey;
 
     public PoeticJuggle(int beanBags, Poem poem) {
         super(beanBags);
@@ -19,5 +20,14 @@ public class PoeticJuggle extends Juggle {
         super.perform();
         System.out.println("%%%% Recite %%%%");
         poem.recite();
+        System.out.println("RANDOM KEY: " + randomKey);
+    }
+
+    public Poem getPoem() {
+        return poem;
+    }
+
+    public void setRandomKey(double randomKey) {
+        this.randomKey = randomKey;
     }
 }
