@@ -1,9 +1,13 @@
 package com.sustav.chap2;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class PoeticJuggle extends Juggle {
 
     private Poem poem;
     private double randomKey;
+    @Value("YES")
+    private String value;
 
     public PoeticJuggle(int beanBags, Poem poem) {
         super(beanBags);
@@ -20,7 +24,7 @@ public class PoeticJuggle extends Juggle {
         super.perform();
         System.out.println("%%%% Recite %%%%");
         poem.recite();
-        System.out.println("RANDOM KEY: " + randomKey);
+        System.out.println("RANDOM KEY: " + randomKey + ", VALUE: " + value);
     }
 
     public Poem getPoem() {
